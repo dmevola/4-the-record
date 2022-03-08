@@ -27,6 +27,9 @@ Post.init({
     image_name: {
         type: DataTypes.STRING,
     },
+    wishlist: {
+        type: DataTypes.BOOLEAN
+    },
     user_id: {
         type: DataTypes.INTEGER,
         references: {

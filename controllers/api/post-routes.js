@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
                 'artist',
                 "song",
                 'image_name',
+                'wishlist',
                 'created_at'
             ],
             include: [{
@@ -37,6 +38,8 @@ router.get('/', (req, res) => {
         });
 });
 
+
+
 router.get('/:id', (req, res) => {
     Post.findOne({
             where: {
@@ -48,6 +51,7 @@ router.get('/:id', (req, res) => {
                 'artist',
                 "song",
                 'image_name',
+                'wishlist',
                 'created_at'
             ],
             include: [{
@@ -83,6 +87,7 @@ router.post('/', withAuth, (req, res) => {
             artist: req.body.artist,
             song: req.body.song,
             image_name: req.body.image,
+            wishlist: req.body.wishlist,
             user_id: req.session.user_id
         })
         .then(dbPostData => res.json(dbPostData))
@@ -101,7 +106,8 @@ router.put('/:id', (req, res) => {
             genre: req.body.genre,
             artist: req.body.artist,
             song: req.body.song,
-            image_name: req.body.image_name
+            image_name: req.body.image_name,
+            wishlist: req.body.wishlist
         }, {
             where: {
                 id: req.params.id

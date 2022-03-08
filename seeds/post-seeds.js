@@ -5,6 +5,7 @@ const postdata = [{
         artist: 'Everly Brothers',
         song: 'Bye Bye Love',
         image_name: 'test.jpg',
+        wishlist: "false",
         user_id: 10
     },
     {
@@ -12,6 +13,7 @@ const postdata = [{
         artist: 'Queen',
         song: 'Bohemian Rhapsody',
         image_name: 'test.jpg',
+        wishlist: "true",
         user_id: 8
     },
     {
@@ -19,6 +21,7 @@ const postdata = [{
         artist: 'Janet Jackson',
         song: 'Escapade',
         image_name: 'test.jpg',
+        wishlist: "false",
         user_id: 1
     }
 

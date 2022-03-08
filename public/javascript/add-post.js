@@ -7,6 +7,7 @@ async function newFormHandler(event) {
     const artist = document.querySelector('input[name="artist"]').value.trim();
     const song = document.querySelector('input[name="song"]').value.trim();
     const image = document.querySelector('input[name="image"]').value.trim();
+    const wishlist = document.querySelector('input[name="wishlist"]').value.trim();
 
     const response = await fetch(`/api/posts`, {
         method: 'POST',
@@ -14,7 +15,8 @@ async function newFormHandler(event) {
             genre,
             artist,
             song,
-            image
+            image,
+            wishlist
         }),
         headers: {
             'Content-Type': 'application/json'
