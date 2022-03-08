@@ -1,0 +1,44 @@
+<section>
+    <h2>Add New Song</h2>
+    <form class=="new-post-form">
+        <div>
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" name="genre">
+        </div> 
+        <div>
+            <label for="artist">Artist</label>
+            <input type="text" id="artist" name="artist">
+        </div>
+        <div>
+            <label for="song">Sung</label>
+            <input type="text" id="song" name="song">
+        </div>
+        <div>
+            <label for="Image">Image</label>
+            <input type="text" id="image" name="image" value="test.jpg">
+        </div>
+        {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" />
+            <input type="submit">
+        </form> --}}
+        <button type="submit" class="btn">Create</button>
+    </form>
+</section>
+
+
+
+{{#if posts.length}}
+<section>
+    <h2>Your Songs</h2>
+    <ul>
+        {{#each posts as |post|}}
+        <li>
+        {{> post-info post}}
+        <br>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
+<script src="/javascript/add-post.js"></script>

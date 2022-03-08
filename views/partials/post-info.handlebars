@@ -1,0 +1,11 @@
+<div class="card" style="width: 10rem;">
+  <img class="card-img-top" src="images/{{image_name}}" alt="Card image cap" style= "height: 8rem; ">
+  <div class="card-body">
+    <h5 class="card-title">Song: {{song}}</h5>
+    <p class="card-text">
+        <div>Genre: {{genre}}</div>
+        <div>Artist: {{artist}}</div>
+    </p>
+    <a href="/post/{{id}}" class="btn btn-primary">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+  </div>
+</div>
