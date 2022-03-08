@@ -1,17 +1,12 @@
-const multer = require('multer');
+var cloudinary = require('cloudinary').v2;
 
-const storage = multer.diskStorage({
-    destenation: (req, file, cb) => {
-        cb(null, '')
-    },
-    filename: function(req, file, eb) {
-        cb(null, file.fieldname + '-' + Dtae.now() + '-' +
-            path.extname(file.originalname));
-    }
-});
+var uploade = () => {
+    cloudinary.config({
+        cloud_name: '',
+        api_key: '',
+        api_secret: ''
 
-const upload = multer({
-    storage: storage
-})
+    });
+}
 
-module.exports = upload;
+module.exports = uploade;

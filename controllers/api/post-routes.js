@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-const upload = require('../../utils/upload');
+const cloudinary = require('../../utils/upload');
 
 // get all users
 router.get('/', (req, res) => {
@@ -92,9 +92,10 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
-// router.post('/upload', withAuth, upload.single('image'), (req, res) => {
-//     res.send('image uploaded');
-// })
+router.post('/upload', withAuth, (req, res) => {
+    const file = req.files.photo;
+
+})
 
 router.put('/:id', (req, res) => {
     Post.update({
