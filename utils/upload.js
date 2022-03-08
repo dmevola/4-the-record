@@ -1,12 +1,12 @@
 var cloudinary = require('cloudinary').v2;
 
-var uploade = () => {
-    cloudinary.config({
-        cloud_name: '',
-        api_key: '',
-        api_secret: ''
 
-    });
-}
+cloudinary.config({
+    cloud_name: 'dbepgsyve',
+    api_key: '313356277557857',
+    api_secret: 'eGeqTU2Ho-y4H3BIWgo10_vLdqM'
 
-module.exports = uploade;
+});
+
+
+module.exports = cloudinary;

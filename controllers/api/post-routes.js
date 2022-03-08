@@ -4,6 +4,8 @@ const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 const cloudinary = require('../../utils/upload');
 
+
+
 // get all users
 router.get('/', (req, res) => {
     console.log('===================');
@@ -92,8 +94,20 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
-router.post('/upload', withAuth, (req, res) => {
-    const file = req.files.photo;
+router.post('/upload', (req, res) => {
+    cloudinary.uploader.upload('../../public/images/tetst.jpg')
+        .then(result => {
+            console.log(result)
+        })
+        // cloudinary.uploader.upload(req.file.path, {
+        //         public_id: "newpic",
+        //         width: 500,
+        //         height: 500,
+        //         crop: 'fill'
+        //     })
+        //     .then(result => {
+        //         console.log(result);
+        //     })
 
 })
 
