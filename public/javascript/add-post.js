@@ -66,6 +66,7 @@ const upload = ((event) => {
         }).then(response => {
             console.log(response.data.secure_url)
             image = response.data.secure_url
+            document.querySelector('.btn').disabled = false;
             document.querySelector('.btn').addEventListener('click', newFormHandler);
 
         }).catch(err => {
@@ -76,4 +77,5 @@ const upload = ((event) => {
 
 });
 
+document.querySelector('.btn').disabled = true;
 document.querySelector('#file_upload').addEventListener('change', upload);
