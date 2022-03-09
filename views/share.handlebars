@@ -1,0 +1,14 @@
+{{#if posts.length}}
+<section>
+    <h2>{{username}}</h2>
+    <ul class="profile">
+        {{#each posts as |post|}}
+        <li>
+        {{> post-info post}}
+        {{!-- <br>
+        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
+        </li>
+        {{/each}}
+    </ul>
+</section>
+{{/if}}
