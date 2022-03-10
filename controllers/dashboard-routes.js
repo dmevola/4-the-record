@@ -35,6 +35,7 @@ router.get('/', withAuth, (req, res) => {
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
+            posts.reverse();
             res.render('dashboard', { posts, loggedIn: true, layout: 'dash' });
         })
         .catch(err => {
@@ -74,6 +75,7 @@ router.get('/all/:id', (req, res) => {
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
+            posts.reverse();
             const username = posts[0].user.username;
             res.render('share', { posts, username, loggedIn: true, layout: 'dash' });
         })
