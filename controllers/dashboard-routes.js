@@ -29,13 +29,53 @@ router.get('/', withAuth, (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username', 'id']
                 }
             ]
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
             res.render('dashboard', { posts, loggedIn: true, layout: 'dash' });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.get('/all/:id', (req, res) => {
+    console.log(req.session);
+    console.log('======================');
+    Post.findAll({
+            where: {
+                user_id: req.params.id
+            },
+            attributes: [
+                'id',
+                'genre',
+                'artist',
+                "song",
+                'image_name',
+                'created_at'
+            ],
+            include: [{
+                    model: Comment,
+                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
+                },
+                {
+                    model: User,
+                    attributes: ['username', 'id']
+                }
+            ]
+        })
+        .then(dbPostData => {
+            const posts = dbPostData.map(post => post.get({ plain: true }));
+            const username = posts[0].user.username;
+            res.render('share', { posts, username, loggedIn: true, layout: 'dash' });
         })
         .catch(err => {
             console.log(err);

@@ -24,12 +24,13 @@ router.get('/', (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username', 'id']
                 }
             ]
         })
         .then(dbPostData => {
             const posts = dbPostData.map(post => post.get({ plain: true }));
+            console.log(posts);
             res.render('homepage', { posts, loggedIn: req.session.loggedIn, layout: 'main' });
         })
         .catch(err => {
@@ -62,7 +63,7 @@ router.get('/post/:id', (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username', 'id']
                 }
             ]
         })

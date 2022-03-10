@@ -14,15 +14,15 @@
             <input type="text" id="song" name="song">
         </div>
         <div>
-            <label for="Image">Image</label>
-            <input type="text" id="image" name="image" value="test.jpg">
+        <input id="file_upload" type="file">
         </div>
-        {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
-            <input type="file" name="image" />
-            <input type="submit">
-        </form> --}}
         <button type="submit" class="btn">Create</button>
     </form>
+
+     {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="images">
+            <input type="submit">
+        </form> --}}
 </section>
 
 
@@ -42,3 +42,4 @@
 </section>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

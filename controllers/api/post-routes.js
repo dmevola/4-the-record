@@ -2,7 +2,9 @@ const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-const upload = require('../../utils/upload');
+const cloudinary = require('../../utils/upload');
+
+
 
 // get all users
 router.get('/', (req, res) => {
@@ -60,7 +62,7 @@ router.get('/:id', (req, res) => {
                 },
                 {
                     model: User,
-                    attributes: ['username']
+                    attributes: ['username', 'id']
                 }
             ]
         })
@@ -92,9 +94,22 @@ router.post('/', withAuth, (req, res) => {
         });
 });
 
-// router.post('/upload', withAuth, upload.single('image'), (req, res) => {
-//     res.send('image uploaded');
-// })
+router.post('/upload', (req, res) => {
+    cloudinary.uploader.upload('../../public/images/tetst.jpg')
+        .then(result => {
+            console.log(result)
+        })
+        // cloudinary.uploader.upload(req.file.path, {
+        //         public_id: "newpic",
+        //         width: 500,
+        //         height: 500,
+        //         crop: 'fill'
+        //     })
+        //     .then(result => {
+        //         console.log(result);
+        //     })
+
+})
 
 router.put('/:id', (req, res) => {
     Post.update({

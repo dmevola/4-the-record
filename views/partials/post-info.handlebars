@@ -1,5 +1,6 @@
 <div class="card" style="width: 10rem;">
-  <img class="card-img-top" src="images/{{image_name}}" alt="Card image cap" style= "height: 8rem; ">
+  <a href="/dashboard/all/{{user.id}}">{{user.username}}</a>
+  <img class="card-img-top" src={{image_name}} alt="Card image cap" style= "height: 8rem; ">
   <div class="card-body">
     <h5 class="card-title">Song: {{song}}</h5>
     <p class="card-text">
@@ -8,4 +9,5 @@
     </p>
     <a href="/post/{{id}}" class="btn btn-primary">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
+  {{!-- <a href="https://www.facebook.com/sharer/sharer.php?u=blog.shahednasser.com&quote=Awesome%20Blog!"><i class="bi bi-facebook"  ></i></a> --}}
 </div>

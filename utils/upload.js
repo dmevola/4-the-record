@@ -1,17 +1,12 @@
-const multer = require('multer');
+var cloudinary = require('cloudinary').v2;
 
-const storage = multer.diskStorage({
-    destenation: (req, file, cb) => {
-        cb(null, '')
-    },
-    filename: function(req, file, eb) {
-        cb(null, file.fieldname + '-' + Dtae.now() + '-' +
-            path.extname(file.originalname));
-    }
+
+cloudinary.config({
+    cloud_name: 'dbepgsyve',
+    api_key: '313356277557857',
+    api_secret: 'eGeqTU2Ho-y4H3BIWgo10_vLdqM'
+
 });
 
-const upload = multer({
-    storage: storage
-})
 
-module.exports = upload;
+module.exports = cloudinary;

@@ -5,10 +5,8 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
 const helpers = require('./utils/helpers');
-const multer = require('multer');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
-const upload = require('express-fileupload');
-
+const cloudinary = require('./utils/upload');
 
 const hbs = exphbs.create({ helpers });
 
@@ -18,7 +16,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(upload());
+
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
@@ -35,6 +33,8 @@ const sess = {
 };
 
 app.use(session(sess));
+
+
 
 // turn on routes
 app.use(routes);
