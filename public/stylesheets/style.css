@@ -8,7 +8,7 @@ html {
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: rgb(83, 139, 19);
+    color: rgb(19, 101, 139);
 }
 
 .nav-text {
@@ -54,7 +54,7 @@ button:hover {
 
 .btn-logout {
     display: inline;
-    background-color: rgb(19, 139, 73) !important;
+    background-color: rgb(19, 101, 139) !important;
     text-decoration: none;
     color: blanchedalmond;
     font-weight: bold;
@@ -100,7 +100,6 @@ form label {
 .wrapper {
     width: 100%;
     min-height: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -112,7 +111,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 2% 2%;
-    background-color: rgb(19, 139, 73);
+    background-color: rgb(19, 101, 139);
 }
 
 main {
@@ -173,12 +172,12 @@ h4 {
 }
 
 .upvote-btn {
-    background-color: #197d0f;
+    background-color: rgb(19, 101, 139);
     transition: background-color .1s;
 }
 
 .upvote-btn:hover {
-    background-color: #1f9c13;
+    background-color: rgb(19, 101, 139);
 }
 
 .comment-form {
@@ -215,9 +214,10 @@ footer {
     padding: 1%;
     font-size: 110%;
     justify-content: center;
-    background-color: rgb(19, 139, 73);
+    background-color: rgb(19, 101, 139);
     color: black;
     opacity: .9;
+    width: 100%;
 }
 
 .card {
