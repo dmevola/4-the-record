@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],
@@ -49,7 +49,7 @@ router.get('/post/:id', (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],

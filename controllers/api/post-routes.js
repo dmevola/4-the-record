@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],
@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],
@@ -83,7 +83,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
             genre: req.body.genre,
             artist: req.body.artist,
-            song: req.body.song,
+            title: req.body.title,
             image_name: req.body.image,
             user_id: req.session.user_id
         })
@@ -115,7 +115,7 @@ router.put('/:id', (req, res) => {
     Post.update({
             genre: req.body.genre,
             artist: req.body.artist,
-            song: req.body.song,
+            title: req.body.title,
             image_name: req.body.image_name
         }, {
             where: {

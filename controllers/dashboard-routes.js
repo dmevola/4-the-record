@@ -15,7 +15,7 @@ router.get('/', withAuth, (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],
@@ -55,7 +55,7 @@ router.get('/all/:id', (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],
@@ -91,7 +91,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
                 'id',
                 'genre',
                 'artist',
-                "song",
+                'title',
                 'image_name',
                 'created_at'
             ],

@@ -20,7 +20,7 @@ Post.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    song: {
+    title: {
         type: DataTypes.STRING,
         allowNull: false
     },

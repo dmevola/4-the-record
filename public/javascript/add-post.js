@@ -6,7 +6,7 @@ async function newFormHandler(event) {
 
     const genre = document.querySelector('input[name="genre"]').value.trim();
     const artist = document.querySelector('input[name="artist"]').value.trim();
-    const song = document.querySelector('input[name="song"]').value.trim();
+    const title = document.querySelector('input[name="title"]').value.trim();
     // const image = document.querySelector('input[name="image"]').value.trim();
     // const images = document.querySelector('input[name="images"]').value.trim();
 
@@ -27,7 +27,7 @@ async function newFormHandler(event) {
         body: JSON.stringify({
             genre,
             artist,
-            song,
+            title,
             image
         }),
         headers: {

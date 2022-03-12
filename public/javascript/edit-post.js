@@ -3,7 +3,7 @@ async function editFormHandler(event) {
 
     const genre = document.querySelector('input[name="genre"]').value.trim();
     const artist = document.querySelector('input[name="artist"]').value.trim();
-    const song = document.querySelector('input[name="song"]').value.trim();
+    const title = document.querySelector('input[name="title"]').value.trim();
     const image_name = document.querySelector('input[name="image_name"]').value.trim();
 
     const id = window.location.toString().split("/")[
@@ -14,7 +14,7 @@ async function editFormHandler(event) {
         body: JSON.stringify({
             genre,
             artist,
-            song,
+            title,
             image_name
         }),
         headers: {
