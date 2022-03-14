@@ -11,6 +11,10 @@ html {
     color: rgb(19, 101, 139);
 }
 
+nav {
+    display: flex;
+}
+
 .nav-text {
     text-decoration: none;
     color: blanchedalmond;
@@ -215,7 +219,7 @@ footer {
     font-size: 110%;
     justify-content: center;
     background-color: rgb(19, 101, 139);
-    color: black;
+    color: blanchedalmond;
     opacity: .9;
     width: 100%;
 }
