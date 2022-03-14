@@ -1,6 +1,14 @@
+<div class="header-container">
+        <h2>{{username}}</h2>
+        <ul class="links-container">
+            <li id="facebook" ><i class="bi bi-facebook"></i></li>
+            <li id="twitter" ><i class="bi bi-twitter"></i><liv>
+            <li id="linkedin" ><i class="bi bi-linkedin"></i></li>
+            <li id="copy"><i class="bi bi-clipboard"></i></li>
+        </ul>
+</div>
 {{#if posts.length}}
 <section>
-    <h2>{{username}}</h2>
     <ul class="profile">
         {{#each posts as |post|}}
         <li>
@@ -12,3 +20,5 @@
     </ul>
 </section>
 {{/if}}
+
+<script src="/javascript/share.js"></script>
