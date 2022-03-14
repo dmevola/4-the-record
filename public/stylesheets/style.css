@@ -234,3 +234,27 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.links-container li {
+    margin: 0 30px 0 30px;
+}
+
+.links-container-single {
+    display: flex;
+}
+
+.links-container-single li {
+    margin: 0 5px 0 5px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
