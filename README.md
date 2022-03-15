@@ -1,4 +1,4 @@
-# Tech-Blog-1400
+# 4-the-record
 ## 4-the-record
 * This is a full stack web application written in an Express and Sequlize framework, deployed to Heroku. It is a site where people can register and share their records, view the other records, and leave comments on other people's records.
 ## Table of Contents
