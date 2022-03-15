@@ -11,6 +11,10 @@ html {
     color: rgb(19, 101, 139);
 }
 
+body {
+    background-color: rgba(6, 146, 210, 0.112);
+}
+
 .nav-text {
     text-decoration: none;
     color: blanchedalmond;
@@ -69,6 +73,7 @@ button:hover {
 .post-list {
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 textarea,
