@@ -268,7 +268,7 @@ footer {
     justify-content: space-between;
 }
 
-.comments {
+.comment-btn {
     position: absolute;
     bottom: 21px;
 }
