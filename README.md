@@ -21,12 +21,13 @@
 ## Usage
 Deployed [Link](https://record-1400.herokuapp.com/)
 
-<img width="1271" alt="Screen Shot 2022-03-14 at 4 01 46 PM" src="https://user-images.githubusercontent.com/94582549/158274752-4e775ffc-f5aa-4232-9901-a7a9343ee0a5.png">
+<img width="989" alt="Screen Shot 2022-03-14 at 11 49 02 PM" src="https://user-images.githubusercontent.com/94582549/158322481-084ab271-0985-4bb7-9828-916a04cdaee8.png">
 
 
-<img width="1271" alt="Screen Shot 2022-03-14 at 4 01 31 PM" src="https://user-images.githubusercontent.com/94582549/158274788-cba25d4a-7a05-48a9-95b8-b0757930f043.png">
 
-<img width="1258" alt="Screen Shot 2022-03-14 at 4 01 19 PM" src="https://user-images.githubusercontent.com/94582549/158274812-ba034e23-8d26-4fa9-8b09-81567ed6d9c7.png">
+<img width="992" alt="Screen Shot 2022-03-14 at 11 49 12 PM" src="https://user-images.githubusercontent.com/94582549/158322530-a9e12628-0da6-46b9-874b-612848d67557.png">
+
+<img width="987" alt="Screen Shot 2022-03-14 at 11 49 27 PM" src="https://user-images.githubusercontent.com/94582549/158322572-2a7b4b09-81f8-4059-90aa-e04accda800c.png">
 
 
 
